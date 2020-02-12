@@ -1,4 +1,8 @@
 // Global styling for this template
+@font-face {
+  src: url("../assets/ThirdRail.ttf");
+  font-family: 'ThirdRail';
+}
 body {
   overflow-x: hidden;
   @include body-font;

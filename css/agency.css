@@ -1,3 +1,8 @@
+@font-face {
+  src: url("../assets/ThirdRail.ttf");
+  font-family: 'ThirdRail';
+}
+
 body {
   overflow-x: hidden;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -97,11 +102,11 @@ img::-moz-selection {
   background: transparent;
 }
 
-#mainNav {
-  background-color: #212529;
+#mainNav.navbar {
+  background-color: #343a40;
 }
 
-#mainNav .navbar-toggler {
+#mainNav.navbar .navbar-toggler {
   font-size: 12px;
   right: 0;
   padding: 13px;
@@ -112,37 +117,37 @@ img::-moz-selection {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-#mainNav .navbar-brand {
+#mainNav.navbar .navbar-brand {
   color: #fed136;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-#mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+#mainNav.navbar .navbar-brand.active, #mainNav.navbar .navbar-brand:active, #mainNav.navbar .navbar-brand:focus, #mainNav.navbar .navbar-brand:hover {
   color: #fec503;
 }
 
-#mainNav .navbar-nav .nav-item .nav-link {
+#mainNav.navbar .navbar-nav .nav-item .nav-link {
   font-size: 90%;
-  font-weight: 400;
+  font-weight: 700;
   padding: 0.75em 0;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   color: white;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+#mainNav.navbar .navbar-nav .nav-item .nav-link.active, #mainNav.navbar .navbar-nav .nav-item .nav-link:hover {
   color: #fed136;
 }
 
-#mainNav .navbar-nav .nav-item-highlight .nav-link {
+#mainNav.navbar .navbar-nav .nav-item-highlight .nav-link {
   font-weight: 700;
   color: #fed136;
 }
 
 @media (min-width: 992px) {
   #mainNav {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
@@ -171,13 +176,23 @@ img::-moz-selection {
 }
 
 header.masthead {
+  position: relative;
   text-align: center;
   color: white;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-color: #343a40;
+  background-color: rgba(52, 58, 64, 0.9);
+}
+
+header.masthead:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../img/gearsbackground.jpg);
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: -1;
 }
 
 header.masthead .intro-text {
@@ -185,24 +200,24 @@ header.masthead .intro-text {
   padding-bottom: 100px;
 }
 
+header.masthead .intro-text a:hover {
+  text-decoration: none;
+}
+
 header.masthead .intro-text .intro-lead-in {
   font-size: 22px;
   font-style: italic;
   line-height: 22px;
   margin-bottom: 25px;
-  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'ThirdRail', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 header.masthead .intro-text .intro-heading {
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 100;
   line-height: 40px;
-  margin-bottom: 25px;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-header.masthead .intro-text .intro-heading:nth-child(2) {
-  color: #fed136;
+  margin-bottom: 70px;
+  font-family: 'ThirdRail', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 header.masthead .intro-text a {
@@ -219,14 +234,14 @@ header.masthead .intro-text a {
     font-style: italic;
     line-height: 40px;
     margin-bottom: 25px;
-    font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'ThirdRail', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   header.masthead .intro-text .intro-heading {
-    font-size: 50px;
-    font-weight: 700;
+    font-size: 6em;
+    font-weight: 100;
     line-height: 30px;
-    margin-bottom: 70px;
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-bottom: 100px;
+    font-family: 'ThirdRail', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 }
 
@@ -483,7 +498,21 @@ header.masthead .intro-text a {
 }
 
 section#contact {
-  background-color: #343a40;
+  position: relative;
+  background-color: rgba(52, 58, 64, 0.9);
+}
+
+section#contact:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../img/gearsbackground.jpg);
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: -1;
 }
 
 section#contact .section-heading {
