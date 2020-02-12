@@ -36,6 +36,12 @@
         }
       }
     }
+    .nav-item-highlight {
+      .nav-link {
+        font-weight: 700;
+        color: $primary;
+      }
+    }
   }
 }
 @media(min-width:992px) {

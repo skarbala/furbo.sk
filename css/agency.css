@@ -134,6 +134,11 @@ img::-moz-selection {
   color: #fed136;
 }
 
+#mainNav .navbar-nav .nav-item-highlight .nav-link {
+  font-weight: 700;
+  color: #fed136;
+}
+
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 25px;
